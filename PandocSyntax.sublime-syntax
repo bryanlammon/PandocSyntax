@@ -346,6 +346,8 @@ contexts:
       scope: comment.block.markdown
       push:
         - include: citations
+        - include: bold # Added to bold inside of inline footnotes (must be before italics)
+        - include: italics # Added to italicize inside inline footnotes
         - meta_scope: string.other.link.description.markdown
         - match: \[
           push:
